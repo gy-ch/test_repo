@@ -1,6 +1,7 @@
 Link: https://stackoverflow.com/questions/39877165/handling-jwt-expiration-in-net-mvc-application
 Link: https://www.codemag.com/Article/2105051/Implementing-JWT-Authentication-in-ASP.NET-Core-5
 
+`code`
 public string Test()
 {
     UserDTO validUser = userRepository.GetUser(new UserModel() { UserName = "stephensmith", Password = "stephen123" });
