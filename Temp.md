@@ -40,3 +40,17 @@ foreach(string role in roleList)
 services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<iTasmiWebIdentityDbContext>();
 ```
+Or
+```
+services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRole<IdentityRole>()
+    .AddEntityFrameworkStores<iTasmiWebIdentityDbContext>();
+```
+
+
+
+> Add user to default role
+```
+if (!await UserManager.IsInRoleAsync(user.Id, "Participant"))
+    await UserManager.AddToRoleAsync(user.Id, "Participant");
+```
