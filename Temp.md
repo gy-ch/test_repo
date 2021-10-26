@@ -16,3 +16,27 @@ public string Test()
 }
 ```
 > https://bootstrapious.com/p/bootstrap-sidebar
+
+```
+IEnumerable<string> roleList = new List<string>()
+{
+    "Participant",
+    "Panel",
+    "Facilitator",
+    "Administrator"
+};
+
+foreach(string role in roleList)
+{
+    bool result = roleManager.RoleExistsAsync(role).Result;
+    if(!result)
+    {
+        roleManager.CreateAsync(new IdentityRole(role));
+    }
+}
+```
+
+```
+services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<iTasmiWebIdentityDbContext>();
+```
