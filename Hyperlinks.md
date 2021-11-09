@@ -12,3 +12,6 @@
 ## Programming Best Practices
 1. ITT 2016 - Kevlin Henney - Seven Ineffective Coding Habits of Many Programmers - https://www.youtube.com/watch?v=ZsHMHukIlJY
 2. 
+
+1. https://www.codingnepalweb.com/drag-drop-file-upload-feature-javascript/
+2. https://bootstrapious.com/p/bootstrap-sidebar
